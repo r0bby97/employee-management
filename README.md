@@ -4,6 +4,15 @@
 
 This browser application was developed as part of my JavaScript project at velpTEC. It lets users add, search, filter, sort, edit and delete employees. The project uses HTML, CSS and vanilla JavaScript without frameworks or a backend.
 
+## Project overview
+
+**Problem:** Managing a list involves more than adding records: users need to find entries, combine filters, keep edits after reloading and recover saved data.
+
+**Approach:** A shared list-processing flow combines search, filters and sorting before rendering batches with `IntersectionObserver`. Form and import validation protect the data model, while local storage and JSON import/export provide persistence and backup.
+
+**Result:** A browser-only employee management prototype with no backend or framework dependency. It demonstrates CRUD operations, state management and data validation. Records remain local to the browser; this is not a shared, multi-user HR system.
+
+
 ## Preview
 
 ![Application preview](docs/preview.png)
@@ -90,7 +99,7 @@ Data is stored in the current browser for the origin used to open the applicatio
 ## Project Structure
 
 ```text
-Projektarbeit_JavaScript/
+employee-management/
 |-- index.html                    Forms, filters, settings and dialogs
 |-- style.css                     Layout, responsive rules and themes
 |-- javascript.js                 Data, events and application logic
@@ -112,3 +121,7 @@ Projektarbeit_JavaScript/
 - Check that employee data and the theme survive a page reload.
 - Cancel a reset, then confirm one and verify that the list remains empty after reloading.
 - Check the layout and dialogs on narrow and wide screens.
+
+## Feedback and contributions
+
+For a bug report, open a repository issue with steps to reproduce, expected and actual behavior, and your browser or device details. Discuss substantial changes in an issue before opening a pull request. Keep changes focused and describe how you checked them.

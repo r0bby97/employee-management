@@ -1,6 +1,12 @@
 # Employee Management
 
+[View the live demo](https://r0bby97.github.io/employee-management/)
+
 This browser application was developed as part of my JavaScript project at velpTEC. It lets users add, search, filter, sort, edit and delete employees. The project uses HTML, CSS and vanilla JavaScript without frameworks or a backend.
+
+## Preview
+
+![Application preview](docs/preview.png)
 
 ## Getting Started
 

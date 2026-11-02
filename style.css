@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: system-ui, sans-serif;
+    color: var(--text-color, #1e293b);
+    background: var(--page-background, #f1f5f9);
+}
+
+/* Dark theme colors. Light theme defaults are in the rules below. */
+body.dark-mode {
+    color-scheme: dark;
+    --page-background: #111113;
+    --surface-background: #1c1c1e;
+    --text-color: #f2f2f7;
+    --field-background: #242426;
+    --field-border: #626266;
+    --button-background: #f2f2f7;
+    --contrast-text: #1c1c1e;
+    --button-hover: #dcdce0;
+    --control-background: #323234;
+    --control-text: #d1d1d6;
+    --control-hover: #444446;
+    --control-border: #48484a;
+    --focus-color: #64a8ff;
+    --error-color: #ff8a80;
+    --card-shadow: 0 2px 12px rgb(0 0 0 / 18%);
+    --dialog-background: #28282a;
+    --dialog-shadow: 0 12px 36px rgb(0 0 0 / 45%);
+    --dialog-backdrop: rgb(0 0 0 / 55%);
+    --menu-background: rgb(44 44 46 / 96%);
+    --menu-border: rgb(255 255 255 / 14%);
+    --menu-shadow: 0 12px 32px rgb(0 0 0 / 36%);
+    --menu-blur: blur(12px);
+    --tooltip-background: #e5e5ea;
+}
+
+/* Forms and filters */
+form,
+.employee-search,
+li {
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--surface-background, white);
+    box-shadow: var(--card-shadow, 0 4px 20px rgb(0 0 0 / 6%));
+}
+
+form,
+.employee-search {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.employee-search {
+    margin-top: 24px;
+}
+
+.filter-sort-row {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-control {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    gap: 12px;
+    min-width: 0;
+}
+
+.sort-control {
+    flex: 1;
+}
+
+.filter-control select {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Put the filter and sort controls below each other on small screens. */
+@media (max-width: 560px) {
+    .filter-sort-row {
+        flex-direction: column;
+    }
+}
+
+.error-message {
+    margin: 0;
+    color: var(--error-color, #b91c1c);
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 8px;
+    border: none;
+    background: var(--button-background, #2563eb);
+    color: var(--contrast-text, white);
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--button-hover, #1d4ed8);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--focus-color, #93c5fd);
+    outline-offset: 2px;
+}
+
+/* Employee list and tooltips */
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+li > button + button {
+    margin-inline-start: 8px;
+}
+
+.employee-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* Long names and details should wrap inside the card. */
+.employee-heading h2 {
+    margin: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+li p {
+    overflow-wrap: anywhere;
+}
+
+/* Keep the tooltip next to its info button. */
+.employee-info {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.info-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 4px 0 0;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.info-button,
+.cancel-button {
+    background: var(--control-background, #e2e8f0);
+    color: var(--control-text, #1e293b);
+}
+
+.info-button:hover,
+.cancel-button:hover {
+    background: var(--control-hover, #cbd5e1);
+    color: var(--text-color, #1e293b);
+}
+
+.employee-tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    width: 260px;
+    max-width: calc(100vw - 88px);
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--tooltip-background, #1e293b);
+    color: var(--contrast-text, white);
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Show the notes on hover or keyboard focus. */
+.employee-info:hover .employee-tooltip,
+.employee-info:focus-within .employee-tooltip {
+    display: block;
+}
+
+/* Keep the notes hidden after Escape until the user returns. */
+.employee-info.tooltip-dismissed .employee-tooltip {
+    display: none;
+}
+
+/* Dialogs */
+dialog {
+    width: 440px;
+    max-width: 90%;
+    padding: 0;
+    border: none;
+    border-radius: 16px;
+    color: inherit;
+    background: var(--dialog-background, white);
+    box-shadow: var(--dialog-shadow, 0 8px 30px rgb(0 0 0 / 20%));
+}
+
+dialog::backdrop {
+    background: var(--dialog-backdrop, rgb(0 0 0 / 40%));
+}
+
+dialog form {
+    background: inherit;
+    box-shadow: none;
+}
+
+dialog h2 {
+    margin: 0 0 8px;
+}
+
+#reset-dialog-description {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Settings button and dropdown */
+/* Use the employee form as the anchor for settings. */
+#add-form {
+    position: relative;
+}
+
+#add-form > label:first-of-type {
+    padding-right: 48px;
+}
+
+.settings {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    z-index: 20;
+}
+
+.settings-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--control-border, #e2e8f0);
+    border-radius: 10px;
+    background: var(--control-background, #f1f5f9);
+    color: var(--control-text, #475569);
+}
+
+.settings-toggle:hover {
+    background: var(--control-hover, #e2e8f0);
+    color: var(--text-color, #1e293b);
+}
+
+.settings-menu {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    width: 232px;
+    padding: 6px;
+    border: 1px solid var(--menu-border, #e2e8f0);
+    border-radius: 10px;
+    background: var(--menu-background, white);
+    box-shadow: var(--menu-shadow, 0 8px 24px rgb(0 0 0 / 12%));
+    backdrop-filter: var(--menu-blur, none);
+    font-size: 14px;
+}
+
+.settings-menu button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+}
+
+.settings-menu button:hover {
+    background: var(--control-hover, #f1f5f9);
+}
+
+.settings-divider {
+    margin: 6px 8px;
+    border: none;
+    border-top: 1px solid var(--menu-border, #e2e8f0);
+}
+
+.settings-menu .reset-button {
+    color: var(--error-color, #b91c1c);
+}
+
+/* Small adjustments for the dark theme */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    border-color: var(--field-border);
+    background: var(--field-background);
+    color: var(--text-color);
+}
+
+body.dark-mode li p {
+    color: #c7c7cc;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #a2a2a8;
+}
+
+body.dark-mode li > button[data-action="edit"] {
+    background: #3a3a3c;
+    color: #f2f2f7;
+}
+
+body.dark-mode li > button[data-action="edit"]:hover {
+    background: #48484a;
+}
+
+body.dark-mode li > button[data-action="delete"] {
+    background: #3a3a3c;
+    color: var(--error-color);
+}
+
+body.dark-mode li > button[data-action="delete"]:hover {
+    background: #4a3334;
+}

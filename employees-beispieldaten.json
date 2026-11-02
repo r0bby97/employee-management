@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "name": "Jane Doe",
+    "department": "IT",
+    "position": "Frontend Developer",
+    "notes": "Focuses on accessible interfaces and reusable UI components."
+  },
+  {
+    "id": 2,
+    "name": "Alex Smith",
+    "department": "Sales",
+    "position": "Account Manager",
+    "notes": "Main contact for long-term business customers."
+  },
+  {
+    "id": 3,
+    "name": "Sam Taylor",
+    "department": "Human Resources",
+    "position": "Recruiter",
+    "notes": "Coordinates interviews and guides applicants through hiring."
+  },
+  {
+    "id": 4,
+    "name": "Emily Johnson",
+    "department": "IT",
+    "position": "Backend Developer",
+    "notes": ""
+  },
+  {
+    "id": 5,
+    "name": "Michael Brown",
+    "department": "Finance",
+    "position": "Accountant",
+    "notes": "Handles invoice checks and monthly account reconciliations."
+  },
+  {
+    "id": 6,
+    "name": "Sophia Wilson",
+    "department": "Sales",
+    "position": "Sales Representative",
+    "notes": "Helps new customers choose suitable services."
+  },
+  {
+    "id": 7,
+    "name": "Daniel Lee",
+    "department": "IT",
+    "position": "Frontend Developer",
+    "notes": "Focuses on accessible interfaces and reusable UI components."
+  },
+  {
+    "id": 8,
+    "name": "Olivia Davis",
+    "department": "Human Resources",
+    "position": "HR Manager",
+    "notes": ""
+  },
+  {
+    "id": 9,
+    "name": "James Miller",
+    "department": "Finance",
+    "position": "Financial Analyst",
+    "notes": "Prepares budget forecasts and financial reports."
+  },
+  {
+    "id": 10,
+    "name": "Emma Clark",
+    "department": "Operations",
+    "position": "Operations Coordinator",
+    "notes": "Coordinates daily processes across several teams."
+  },
+  {
+    "id": 11,
+    "name": "Liam Anderson",
+    "department": "IT",
+    "position": "Frontend Developer",
+    "notes": "Focuses on accessible interfaces and reusable UI components."
+  },
+  {
+    "id": 12,
+    "name": "Noah Thomas",
+    "department": "Sales",
+    "position": "Account Manager",
+    "notes": ""
+  },
+  {
+    "id": 13,
+    "name": "Charlotte Jackson",
+    "department": "Human Resources",
+    "position": "Recruiter",
+    "notes": "Coordinates interviews and guides applicants through hiring."
+  },
+  {
+    "id": 14,
+    "name": "Amelia White",
+    "department": "Finance",
+    "position": "Accountant",
+    "notes": "Handles invoice checks and monthly account reconciliations."
+  },
+  {
+    "id": 15,
+    "name": "Lucas Harris",
+    "department": "Operations",
+    "position": "Operations Coordinator",
+    "notes": "Coordinates daily processes across several teams."
+  },
+  {
+    "id": 16,
+    "name": "Mia Martin",
+    "department": "Marketing",
+    "position": "Content Manager",
+    "notes": ""
+  },
+  {
+    "id": 17,
+    "name": "Henry Thompson",
+    "department": "Customer Support",
+    "position": "Support Agent",
+    "notes": "Answers incoming questions and documents common solutions."
+  },
+  {
+    "id": 18,
+    "name": "Isabella Garcia",
+    "department": "Design",
+    "position": "UI Designer",
+    "notes": "Maintains interface patterns and visual design guidelines."
+  },
+  {
+    "id": 19,
+    "name": "Ethan Martinez",
+    "department": "Logistics",
+    "position": "Logistics Coordinator",
+    "notes": "Coordinates shipments and delivery schedules."
+  },
+  {
+    "id": 20,
+    "name": "Ava Robinson",
+    "department": "Legal",
+    "position": "Legal Counsel",
+    "notes": ""
+  },
+  {
+    "id": 21,
+    "name": "Benjamin Walker",
+    "department": "IT",
+    "position": "Backend Developer",
+    "notes": "Maintains internal APIs and database integrations."
+  },
+  {
+    "id": 22,
+    "name": "Evelyn Hall",
+    "department": "Sales",
+    "position": "Sales Representative",
+    "notes": "Helps new customers choose suitable services."
+  },
+  {
+    "id": 23,
+    "name": "Mason Allen",
+    "department": "Human Resources",
+    "position": "HR Manager",
+    "notes": "Coordinates team development and internal HR processes."
+  },
+  {
+    "id": 24,
+    "name": "Harper Young",
+    "department": "Finance",
+    "position": "Financial Analyst",
+    "notes": ""
+  },
+  {
+    "id": 25,
+    "name": "Logan King",
+    "department": "Operations",
+    "position": "Operations Manager",
+    "notes": "Plans operational capacity and improves team workflows."
+  },
+  {
+    "id": 26,
+    "name": "Ella Wright",
+    "department": "Marketing",
+    "position": "Marketing Specialist",
+    "notes": "Coordinates campaigns and evaluates their results."
+  },
+  {
+    "id": 27,
+    "name": "Oliver Scott",
+    "department": "Customer Support",
+    "position": "Support Specialist",
+    "notes": "Investigates technical support cases and maintains guides."
+  },
+  {
+    "id": 28,
+    "name": "Grace Green",
+    "department": "Design",
+    "position": "UX Designer",
+    "notes": ""
+  },
+  {
+    "id": 29,
+    "name": "Jack Baker",
+    "department": "Logistics",
+    "position": "Supply Chain Analyst",
+    "notes": "Reviews inventory data and supply-chain forecasts."
+  },
+  {
+    "id": 30,
+    "name": "Chloe Adams",
+    "department": "Legal",
+    "position": "Compliance Specialist",
+    "notes": "Maintains internal compliance checklists and training."
+  },
+  {
+    "id": 31,
+    "name": "William Nelson",
+    "department": "IT",
+    "position": "QA Engineer",
+    "notes": "Coordinates regression tests and documents reproducible bugs."
+  },
+  {
+    "id": 32,
+    "name": "Lily Carter",
+    "department": "Sales",
+    "position": "Sales Coordinator",
+    "notes": ""
+  },
+  {
+    "id": 33,
+    "name": "Leo Mitchell",
+    "department": "Human Resources",
+    "position": "HR Specialist",
+    "notes": "Supports employee onboarding and internal training."
+  },
+  {
+    "id": 34,
+    "name": "Nora Perez",
+    "department": "Finance",
+    "position": "Payroll Specialist",
+    "notes": "Coordinates payroll checks and payment schedules."
+  },
+  {
+    "id": 35,
+    "name": "Owen Roberts",
+    "department": "Operations",
+    "position": "Process Analyst",
+    "notes": "Documents workflows and identifies process improvements."
+  },
+  {
+    "id": 36,
+    "name": "Zoe Turner",
+    "department": "Marketing",
+    "position": "SEO Specialist",
+    "notes": ""
+  },
+  {
+    "id": 37,
+    "name": "Jacob Phillips",
+    "department": "Customer Support",
+    "position": "Support Team Lead",
+    "notes": "Coordinates escalations and supports the service team."
+  },
+  {
+    "id": 38,
+    "name": "Hannah Campbell",
+    "department": "Design",
+    "position": "Graphic Designer",
+    "notes": "Creates campaign graphics and presentation assets."
+  },
+  {
+    "id": 39,
+    "name": "Oscar Parker",
+    "department": "Logistics",
+    "position": "Warehouse Manager",
+    "notes": "Coordinates warehouse processes and stock checks."
+  },
+  {
+    "id": 40,
+    "name": "Lucy Evans",
+    "department": "Legal",
+    "position": "Contract Manager",
+    "notes": ""
+  },
+  {
+    "id": 41,
+    "name": "Liam Garcia",
+    "department": "IT",
+    "position": "Frontend Developer",
+    "notes": "Focuses on accessible interfaces and reusable UI components."
+  },
+  {
+    "id": 42,
+    "name": "Noah Martinez",
+    "department": "Sales",
+    "position": "Account Manager",
+    "notes": "Main contact for long-term business customers."
+  },
+  {
+    "id": 43,
+    "name": "Charlotte Robinson",
+    "department": "Human Resources",
+    "position": "Recruiter",
+    "notes": "Coordinates interviews and guides applicants through hiring."
+  },
+  {
+    "id": 44,
+    "name": "Amelia Walker",
+    "department": "Finance",
+    "position": "Accountant",
+    "notes": ""
+  },
+  {
+    "id": 45,
+    "name": "Lucas Hall",
+    "department": "Operations",
+    "position": "Operations Coordinator",
+    "notes": "Coordinates daily processes across several teams."
+  },
+  {
+    "id": 46,
+    "name": "Mia Allen",
+    "department": "Marketing",
+    "position": "Content Manager",
+    "notes": "Maintains editorial calendars and reviews website content."
+  },
+  {
+    "id": 47,
+    "name": "Henry Young",
+    "department": "Customer Support",
+    "position": "Support Agent",
+    "notes": "Answers incoming questions and documents common solutions."
+  },
+  {
+    "id": 48,
+    "name": "Isabella King",
+    "department": "Design",
+    "position": "UI Designer",
+    "notes": ""
+  },
+  {
+    "id": 49,
+    "name": "Ethan Wright",
+    "department": "Logistics",
+    "position": "Logistics Coordinator",
+    "notes": "Coordinates shipments and delivery schedules."
+  },
+  {
+    "id": 50,
+    "name": "Ava Scott",
+    "department": "Legal",
+    "position": "Legal Counsel",
+    "notes": "Reviews agreements and advises teams on contract questions."
+  },
+  {
+    "id": 51,
+    "name": "Benjamin Green",
+    "department": "IT",
+    "position": "Backend Developer",
+    "notes": "Maintains internal APIs and database integrations."
+  },
+  {
+    "id": 52,
+    "name": "Evelyn Baker",
+    "department": "Sales",
+    "position": "Sales Representative",
+    "notes": ""
+  },
+  {
+    "id": 53,
+    "name": "Mason Adams",
+    "department": "Human Resources",
+    "position": "HR Manager",
+    "notes": "Coordinates team development and internal HR processes."
+  },
+  {
+    "id": 54,
+    "name": "Harper Nelson",
+    "department": "Finance",
+    "position": "Financial Analyst",
+    "notes": "Prepares budget forecasts and financial reports."
+  },
+  {
+    "id": 55,
+    "name": "Logan Carter",
+    "department": "Operations",
+    "position": "Operations Manager",
+    "notes": "Plans operational capacity and improves team workflows."
+  },
+  {
+    "id": 56,
+    "name": "Ella Mitchell",
+    "department": "Marketing",
+    "position": "Marketing Specialist",
+    "notes": ""
+  },
+  {
+    "id": 57,
+    "name": "Oliver Perez",
+    "department": "Customer Support",
+    "position": "Support Specialist",
+    "notes": "Investigates technical support cases and maintains guides."
+  },
+  {
+    "id": 58,
+    "name": "Grace Roberts",
+    "department": "Design",
+    "position": "UX Designer",
+    "notes": "Conducts usability reviews and maps customer journeys."
+  },
+  {
+    "id": 59,
+    "name": "Jack Turner",
+    "department": "Logistics",
+    "position": "Supply Chain Analyst",
+    "notes": "Reviews inventory data and supply-chain forecasts."
+  },
+  {
+    "id": 60,
+    "name": "Chloe Phillips",
+    "department": "Legal",
+    "position": "Compliance Specialist",
+    "notes": ""
+  },
+  {
+    "id": 61,
+    "name": "William Campbell",
+    "department": "IT",
+    "position": "QA Engineer",
+    "notes": "Coordinates regression tests and documents reproducible bugs."
+  },
+  {
+    "id": 62,
+    "name": "Lily Parker",
+    "department": "Sales",
+    "position": "Sales Coordinator",
+    "notes": "Coordinates quotations and follows up on sales requests."
+  },
+  {
+    "id": 63,
+    "name": "Leo Evans",
+    "department": "Human Resources",
+    "position": "HR Specialist",
+    "notes": "Supports employee onboarding and internal training."
+  },
+  {
+    "id": 64,
+    "name": "Nora Anderson",
+    "department": "Finance",
+    "position": "Payroll Specialist",
+    "notes": ""
+  },
+  {
+    "id": 65,
+    "name": "Owen Thomas",
+    "department": "Operations",
+    "position": "Process Analyst",
+    "notes": "Documents workflows and identifies process improvements."
+  },
+  {
+    "id": 66,
+    "name": "Zoe Jackson",
+    "department": "Marketing",
+    "position": "SEO Specialist",
+    "notes": "Reviews search visibility and improves content structure."
+  },
+  {
+    "id": 67,
+    "name": "Jacob White",
+    "department": "Customer Support",
+    "position": "Support Team Lead",
+    "notes": "Coordinates escalations and supports the service team."
+  },
+  {
+    "id": 68,
+    "name": "Hannah Harris",
+    "department": "Design",
+    "position": "Graphic Designer",
+    "notes": ""
+  },
+  {
+    "id": 69,
+    "name": "Oscar Martin",
+    "department": "Logistics",
+    "position": "Warehouse Manager",
+    "notes": "Coordinates warehouse processes and stock checks."
+  },
+  {
+    "id": 70,
+    "name": "Lucy Thompson",
+    "department": "Legal",
+    "position": "Contract Manager",
+    "notes": "Tracks contract renewals and keeps agreement records current."
+  },
+  {
+    "id": 71,
+    "name": "Liam King",
+    "department": "IT",
+    "position": "Frontend Developer",
+    "notes": "Focuses on accessible interfaces and reusable UI components."
+  },
+  {
+    "id": 72,
+    "name": "Noah Wright",
+    "department": "Sales",
+    "position": "Account Manager",
+    "notes": ""
+  },
+  {
+    "id": 73,
+    "name": "Charlotte Scott",
+    "department": "Human Resources",
+    "position": "Recruiter",
+    "notes": "Coordinates interviews and guides applicants through hiring."
+  },
+  {
+    "id": 74,
+    "name": "Amelia Green",
+    "department": "Finance",
+    "position": "Accountant",
+    "notes": "Handles invoice checks and monthly account reconciliations."
+  },
+  {
+    "id": 75,
+    "name": "Lucas Baker",
+    "department": "Operations",
+    "position": "Operations Coordinator",
+    "notes": "Coordinates daily processes across several teams."
+  },
+  {
+    "id": 76,
+    "name": "Mia Adams",
+    "department": "Marketing",
+    "position": "Content Manager",
+    "notes": ""
+  },
+  {
+    "id": 77,
+    "name": "Henry Nelson",
+    "department": "Customer Support",
+    "position": "Support Agent",
+    "notes": "Answers incoming questions and documents common solutions."
+  },
+  {
+    "id": 78,
+    "name": "Isabella Carter",
+    "department": "Design",
+    "position": "UI Designer",
+    "notes": "Maintains interface patterns and visual design guidelines."
+  },
+  {
+    "id": 79,
+    "name": "Ethan Mitchell",
+    "department": "Logistics",
+    "position": "Logistics Coordinator",
+    "notes": "Coordinates shipments and delivery schedules."
+  },
+  {
+    "id": 80,
+    "name": "Ava Perez",
+    "department": "Legal",
+    "position": "Legal Counsel",
+    "notes": ""
+  },
+  {
+    "id": 81,
+    "name": "Benjamin Roberts",
+    "department": "IT",
+    "position": "Backend Developer",
+    "notes": "Maintains internal APIs and database integrations."
+  },
+  {
+    "id": 82,
+    "name": "Evelyn Turner",
+    "department": "Sales",
+    "position": "Sales Representative",
+    "notes": "Helps new customers choose suitable services."
+  },
+  {
+    "id": 83,
+    "name": "Mason Phillips",
+    "department": "Human Resources",
+    "position": "HR Manager",
+    "notes": "Coordinates team development and internal HR processes."
+  },
+  {
+    "id": 84,
+    "name": "Harper Campbell",
+    "department": "Finance",
+    "position": "Financial Analyst",
+    "notes": ""
+  },
+  {
+    "id": 85,
+    "name": "Logan Parker",
+    "department": "Operations",
+    "position": "Operations Manager",
+    "notes": "Plans operational capacity and improves team workflows."
+  },
+  {
+    "id": 86,
+    "name": "Ella Evans",
+    "department": "Marketing",
+    "position": "Marketing Specialist",
+    "notes": "Coordinates campaigns and evaluates their results."
+  },
+  {
+    "id": 87,
+    "name": "Oliver Anderson",
+    "department": "Customer Support",
+    "position": "Support Specialist",
+    "notes": "Investigates technical support cases and maintains guides."
+  },
+  {
+    "id": 88,
+    "name": "Grace Thomas",
+    "department": "Design",
+    "position": "UX Designer",
+    "notes": ""
+  },
+  {
+    "id": 89,
+    "name": "Jack Jackson",
+    "department": "Logistics",
+    "position": "Supply Chain Analyst",
+    "notes": "Reviews inventory data and supply-chain forecasts."
+  },
+  {
+    "id": 90,
+    "name": "Chloe White",
+    "department": "Legal",
+    "position": "Compliance Specialist",
+    "notes": "Maintains internal compliance checklists and training."
+  },
+  {
+    "id": 91,
+    "name": "William Harris",
+    "department": "IT",
+    "position": "QA Engineer",
+    "notes": "Coordinates regression tests and documents reproducible bugs."
+  },
+  {
+    "id": 92,
+    "name": "Lily Martin",
+    "department": "Sales",
+    "position": "Sales Coordinator",
+    "notes": ""
+  },
+  {
+    "id": 93,
+    "name": "Leo Thompson",
+    "department": "Human Resources",
+    "position": "HR Specialist",
+    "notes": "Supports employee onboarding and internal training."
+  },
+  {
+    "id": 94,
+    "name": "Nora Garcia",
+    "department": "Finance",
+    "position": "Payroll Specialist",
+    "notes": "Coordinates payroll checks and payment schedules."
+  },
+  {
+    "id": 95,
+    "name": "Owen Martinez",
+    "department": "Operations",
+    "position": "Process Analyst",
+    "notes": "Documents workflows and identifies process improvements."
+  },
+  {
+    "id": 96,
+    "name": "Zoe Robinson",
+    "department": "Marketing",
+    "position": "SEO Specialist",
+    "notes": ""
+  },
+  {
+    "id": 97,
+    "name": "Jacob Walker",
+    "department": "Customer Support",
+    "position": "Support Team Lead",
+    "notes": "Coordinates escalations and supports the service team."
+  },
+  {
+    "id": 98,
+    "name": "Hannah Hall",
+    "department": "Design",
+    "position": "Graphic Designer",
+    "notes": "Creates campaign graphics and presentation assets."
+  },
+  {
+    "id": 99,
+    "name": "Oscar Allen",
+    "department": "Logistics",
+    "position": "Warehouse Manager",
+    "notes": "Coordinates warehouse processes and stock checks."
+  },
+  {
+    "id": 100,
+    "name": "Lucy Young",
+    "department": "Legal",
+    "position": "Contract Manager",
+    "notes": ""
+  }
+]

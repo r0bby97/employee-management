@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <!-- Add employee form and settings. -->
+    <!-- Let JavaScript show the validation messages. -->
+    <form id="add-form" novalidate>
+      <div class="settings">
+        <button
+          id="settings-button"
+          class="settings-toggle"
+          type="button"
+          aria-label="Settings"
+          aria-expanded="false"
+          aria-controls="settings-menu"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M10 3h4l.5 2.5 1.8 1 2.4-.8 2 3.4-1.9 1.7v2.4l1.9 1.7-2 3.4-2.4-.8-1.8 1L14 21h-4l-.5-2.5-1.8-1-2.4.8-2-3.4 1.9-1.7v-2.4L3.3 9.1l2-3.4 2.4.8 1.8-1L10 3Z"
+            />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+        </button>
+
+        <div id="settings-menu" class="settings-menu hidden">
+          <button id="export-button" type="button">Export as JSON</button>
+
+          <button id="import-button" type="button">Import from JSON</button>
+
+          <!-- Opened by the Import from JSON button. -->
+          <input
+            id="import-input"
+            class="hidden"
+            type="file"
+            accept=".json,application/json"
+          />
+
+          <hr class="settings-divider" />
+
+          <button
+            id="theme-button"
+            type="button"
+            aria-label="Current theme: Light mode. Switch to dark mode."
+          >
+            <span id="theme-label">Light mode</span>
+            <span aria-hidden="true">&#10003;</span>
+          </button>
+
+          <hr class="settings-divider" />
+
+          <button id="reset-button" class="reset-button" type="button">
+            Reset data
+          </button>
+        </div>
+      </div>
+
+      <label for="add-name-input">Full name</label>
+      <input
+        id="add-name-input"
+        name="fullName"
+        type="text"
+        maxlength="100"
+        required
+      />
+
+      <label for="add-department-input">Department</label>
+      <input
+        id="add-department-input"
+        name="department"
+        type="text"
+        maxlength="80"
+        required
+      />
+
+      <label for="add-position-input">Position</label>
+      <input
+        id="add-position-input"
+        name="position"
+        type="text"
+        maxlength="100"
+        required
+      />
+
+      <label for="add-notes-input">Additional information (optional)</label>
+      <textarea
+        id="add-notes-input"
+        name="notes"
+        rows="3"
+        maxlength="500"
+        placeholder="Additional information about this employee"
+      ></textarea>
+
+      <p id="add-error" class="error-message hidden" role="alert"></p>
+
+      <button type="submit">Add employee</button>
+    </form>
+
+    <!-- Search, filters and sorting. -->
+    <div class="employee-search">
+      <label for="search-input">Search employees</label>
+      <input
+        id="search-input"
+        name="employeeSearch"
+        type="search"
+        placeholder="Search by name"
+      />
+
+      <label for="filter-field">Filter by</label>
+      <select id="filter-field" name="filterField">
+        <option value="">All employees</option>
+        <option value="department">Department</option>
+        <option value="position">Position</option>
+      </select>
+
+      <div class="filter-sort-row">
+        <div class="filter-control">
+          <label for="filter-value">Value</label>
+          <select id="filter-value" name="filterValue" disabled>
+            <option value="">Choose a filter first</option>
+          </select>
+        </div>
+
+        <div class="filter-control sort-control">
+          <label for="sort-select">Sort by</label>
+          <select id="sort-select" name="employeeSort">
+            <option value="name-asc">Name A-Z</option>
+            <option value="name-desc">Name Z-A</option>
+            <option value="department-asc">Department A-Z</option>
+            <option value="department-desc">Department Z-A</option>
+            <option value="position-asc">Position A-Z</option>
+            <option value="position-desc">Position Z-A</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <p id="list-error" class="error-message hidden" role="alert"></p>
+
+    <!-- Employee cards go here. The sentinel below loads more. -->
+    <ul id="employee-list"></ul>
+
+    <div id="scroll-sentinel" style="height: 1px"></div>
+
+    <!-- Edit the selected employee. -->
+    <dialog id="edit-dialog" aria-labelledby="edit-dialog-title">
+      <form id="edit-form" novalidate>
+        <h2 id="edit-dialog-title">Edit employee</h2>
+
+        <label for="edit-name-input">Full name</label>
+        <input
+          id="edit-name-input"
+          name="name"
+          type="text"
+          maxlength="100"
+          required
+          autofocus
+        />
+
+        <label for="edit-department-input">Department</label>
+        <input
+          id="edit-department-input"
+          name="department"
+          type="text"
+          maxlength="80"
+          required
+        />
+
+        <label for="edit-position-input">Position</label>
+        <input
+          id="edit-position-input"
+          name="position"
+          type="text"
+          maxlength="100"
+          required
+        />
+
+        <label for="edit-notes-input">Additional information (optional)</label>
+        <textarea
+          id="edit-notes-input"
+          name="notes"
+          rows="3"
+          maxlength="500"
+          placeholder="Additional information about this employee"
+        ></textarea>
+
+        <p id="edit-error" class="error-message hidden" role="alert"></p>
+
+        <div class="dialog-actions">
+          <button id="cancel-edit-button" class="cancel-button" type="button">
+            Cancel
+          </button>
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- Ask before deleting all employee data. -->
+    <dialog
+      id="reset-dialog"
+      aria-labelledby="reset-dialog-title"
+      aria-describedby="reset-dialog-description"
+    >
+      <form id="reset-form">
+        <h2 id="reset-dialog-title">Reset all employee data?</h2>
+        <p id="reset-dialog-description">
+          This will delete all employees, including the sample records. This
+          action cannot be undone.
+        </p>
+
+        <div class="dialog-actions">
+          <button
+            id="cancel-reset-button"
+            class="cancel-button"
+            type="button"
+            autofocus
+          >
+            Cancel
+          </button>
+          <button id="confirm-reset-button" type="button">Reset data</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
